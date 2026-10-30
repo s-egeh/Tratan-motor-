@@ -80,14 +80,14 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
 
 /* Logo: transparent PNG, sized here only. The footer copy sits on a cream plate
    because the navy wordmark disappears on the navy footer. */
-.logo-link img { height: 44px; width: auto; aspect-ratio: auto 752 / 240; }
+.logo-link img { height: 44px; width: auto; aspect-ratio: auto 741 / 240; }
 .footer-logo {
   display: inline-block;
   vertical-align: top;
   box-sizing: content-box;
   height: 44px;
   width: auto;
-  aspect-ratio: auto 752 / 240;
+  aspect-ratio: auto 741 / 240;
   padding: 10px 14px;
   background: var(--cream);
   border-radius: var(--radius-sm);
