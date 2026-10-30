@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Tratan Motors — Get a Quote</title>
+  <meta name="description" content="Contact Tratan Motors about DAF and FAW trucks, trailers, and fleet solutions. Phone 0537685549, Tema &amp; Accra.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/contact.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+    body { background: var(--surface-alt); }
+
+    .contact-hero {
+      background: var(--gradient-navy);
+      color: var(--text-on-dark);
+      text-align: center;
+      padding: 72px 24px 80px;
+    }
+    .contact-hero h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; margin-bottom: 16px; }
+    .contact-hero p { max-width: 640px; margin: 0 auto 10px; font-size: clamp(1rem, 2vw, 1.15rem); opacity: 0.93; line-height: 1.65; }
+    .contact-hero p + p { opacity: 0.88; font-size: 1rem; }
+
+    .split-section { padding: 64px 24px 80px; }
+    .split-grid { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 900px) { .split-grid { grid-template-columns: 1fr; } }
+
+    /* Eyebrow: navy label with an orange bar, since orange text on white is 2.76:1. */
+    .direct-label { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--text-strong); margin-bottom: 8px; }
+    .direct-label::before { content: ''; width: 24px; height: 3px; border-radius: 2px; background: var(--brand-orange); }
+    .direct-title { font-size: 1.5rem; font-weight: 800; color: var(--text-strong); margin-bottom: 10px; }
+    .direct-lead { font-size: 1rem; color: var(--text-body); margin-bottom: 28px; line-height: 1.65; }
+
+    .info-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
+    .info-row { display: flex; gap: 14px; align-items: flex-start; }
+    .info-row .contact-icon { margin-right: 0; }
+    .info-row .txt strong { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-strong); margin-bottom: 2px; }
+    .info-row .txt span, .info-row .txt a { font-size: 15px; color: var(--text-body); }
+    .info-row .txt a, .form-card p a { color: var(--brand-navy-light); text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; transition: text-decoration-color var(--transition); }
+    .info-row .txt a:hover, .form-card p a:hover { text-decoration-color: var(--brand-orange); }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #25D366;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s;
+      width: 100%;
+      max-width: 320px;
+      justify-content: center;
+    }
+    .whatsapp-btn:hover { background-color: #1ebe5d; }
+    .whatsapp-btn i { font-size: 22px; }
+
+    .form-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-card label { display: block; font-size: 12px; font-weight: 800; color: var(--text-strong); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-card input, .form-card select, .form-card textarea {
+      width: 100%; padding: 12px 14px; margin-bottom: 18px;
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      background: var(--surface); color: var(--text-strong);
+      font-family: inherit; font-size: 15px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-card input:focus, .form-card select:focus, .form-card textarea:focus {
+      outline: none; border-color: var(--brand-orange); box-shadow: 0 0 0 3px rgba(244, 121, 32, 0.25);
+    }
+    .form-card textarea { min-height: 120px; resize: vertical; }
+    .btn-submit {
+      width: 100%; padding: 16px;
+      font-weight: 800; font-size: 16px;
+    }
+
+    .map-wrap { width: 100%; background: var(--brand-navy-dark); }
+    .map-iframe { width: 100%; height: 420px; border: 0; display: block; }
+    .map-caption {
+      text-align: center; padding: 16px 24px;
+      font-size: 14px; color: rgba(255,255,255,0.85);
+      background: var(--brand-navy-dark);
+    }
+
+    .faq-section { padding: 80px 24px; max-width: 800px; margin: 0 auto; }
+    .faq-section h2 { text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--text-strong); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; text-align: left;
+      padding: 18px 8px 18px 0;
+      background: none; border: none;
+      font-family: inherit; font-size: 16px; font-weight: 700; color: var(--text-strong);
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .faq-q span.chev { font-size: 12px; color: var(--brand-orange); transition: transform 0.25s; }
+    .faq-item.is-open .faq-q span.chev { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding: 0 0 18px 0;
+      font-size: 15px; line-height: 1.7; color: var(--text-body);
+    }
+    .faq-item.is-open .faq-a { display: block; }
+
+    .cta-strip {
+      background: var(--brand-navy);
+      color: var(--text-on-dark);
+      text-align: center;
+      padding: 56px 24px 64px;
+    }
+    .cta-strip h2 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 800; margin-bottom: 16px; opacity: 0.95; }
+    .cta-strip .big-phone {
+      display: block;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-strip .big-phone a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+    .cta-strip p { opacity: 0.88; max-width: 520px; margin: 0 auto; font-size: 1rem; }
+    @media (max-width: 480px) { .form-card { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html"><img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager"></a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html">DAF Trucks</a>
+              <a href="faw-trucks.html">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html">DAF Trucks</a>
+      <a href="faw-trucks.html">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="contact.html" class="current">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="contact-hero" aria-label="Contact us">
+    <h1>Get In Touch</h1>
+    <p>We're easy to reach. Call, email, or fill in the form below — our team will get back to you quickly.</p>
+    <p>Reach out to TRATAN MOTORS today for quotes, fleet consultation, or general inquiries.</p>
+  </section>
+
+  <section class="split-section">
+    <div class="split-grid">
+      <div>
+        <p class="direct-label">Direct Contact</p>
+        <h2 class="direct-title">Speak with our team</h2>
+        <p class="direct-lead">Speak directly with our heavy-duty vehicle experts.</p>
+
+        <div class="info-list">
+          <div class="info-row">
+            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+            <div class="txt">
+              <strong>Phone</strong>
+              <a href="tel:0537685549">0537685549</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+            <div class="txt">
+              <strong>Email</strong>
+              <a href="mailto:mlghana@hotmail.com">mlghana@hotmail.com</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></div>
+            <div class="txt">
+              <strong>Company</strong>
+              <span>Tratan Motors</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="txt">
+              <strong>Location</strong>
+              <span>Fishing Harbour Road, Adjacent Grimaldi, Tema<br>P.O. Box CO 1458, Accra, Ghana</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
+            <div class="txt">
+              <strong>Working Hours</strong>
+              <span>Monday – Friday, 8:00am – 5:30pm<br>Saturday, 9:00am – 2:00pm</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="whatsapp-btn" href="https://wa.me/233537685549" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="form-card">
+        <form id="contactForm" action="#" method="get" novalidate>
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="Your full name">
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+233 …">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="DAF Truck Enquiry">DAF Truck Enquiry</option>
+            <option value="FAW Truck Enquiry">FAW Truck Enquiry</option>
+            <option value="Trailer Enquiry">Trailer Enquiry</option>
+            <option value="Fleet Consultation">Fleet Consultation</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your requirements…"></textarea>
+
+          <button type="submit" class="btn-submit">Request a Free Quote</button>
+        </form>
+        <p style="margin-top:14px;font-size:13px;color:var(--text-body);line-height:1.5;">Submitting opens your email app with your message pre-filled. You can also reach us directly at <a href="mailto:mlghana@hotmail.com">mlghana@hotmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="map-wrap">
+    <p class="map-pin" style="text-align:center;padding:28px 24px 0;background:var(--brand-navy-dark);margin:0;">
+      <i class="fa-solid fa-location-dot" style="font-size: 48px; color: var(--brand-orange); display:block; margin-bottom:16px;" aria-hidden="true"></i>
+    </p>
+    <iframe
+      class="map-iframe"
+      title="Map of Ghana — Tratan Motors service area"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Tema+Ghana&z=11&output=embed">
+    </iframe>
+    <p class="map-caption">Operational base: Tema · Mailing: P.O. Box CO 1458, Accra, Ghana</p>
+  </div>
+
+  <section class="faq-section" id="faq">
+    <h2>Quick Answers</h2>
+
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false">
+        Do you sell new or used trucks?
+        <span class="chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="faq-a">We primarily supply new trucks direct from DAF and FAW. If you're looking for something specific in used, get in touch and we'll see what we can do.</div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false">
+        Can you supply trucks outside of Ghana?
+        <span class="chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="faq-a">Our main market is Ghana, but get in touch if you're based elsewhere in West Africa — we may be able to help.</div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false">
+        How long does delivery take?
+        <span class="chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="faq-a">It depends on stock levels and the specific model. We'll give you a realistic timeline when you enquire.</div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false">
+        Do you offer financing options?
+        <span class="chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="faq-a">We don't directly offer financing, but we can point you toward options and help you navigate the process.</div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" aria-expanded="false">
+        What happens if there's a problem after delivery?
+        <span class="chev" aria-hidden="true">▼</span>
+      </button>
+      <div class="faq-a">Call us. We take after-sales seriously and we'll work with you to sort out any issues.</div>
+    </div>
+  </section>
+
+  <section class="cta-strip" aria-label="Call us">
+    <h2>Prefer to Just Call?</h2>
+    <span class="big-phone"><a href="tel:0537685549">0537685549</a></span>
+    <p>We're available Monday to Saturday during business hours.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+
+      document.querySelectorAll('.faq-q').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.closest('.faq-item');
+          var wasOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.faq-item').forEach(function (el) {
+            el.classList.remove('is-open');
+            el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          });
+          if (!wasOpen) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('fullName').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value.trim();
+        if (!name || !phone || !email || !subject || !message) return;
+        var body = 'Name: ' + name + '\r\nPhone: ' + phone + '\r\nEmail: ' + email + '\r\n\r\n' + message;
+        var mailto = 'mailto:mlghana@hotmail.com?subject=' + encodeURIComponent(subject + ' — Tratan Motors enquiry') + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+      });
+    })();
+  </script>
+</body>
+</html>

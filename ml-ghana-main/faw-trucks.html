@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAW Trucks | Tratan Motors — Built Tough for Ghana</title>
+  <meta name="description" content="FAW J6 and JH6 heavy trucks from Tratan Motors — cost-effective, reliable, and built for African roads.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/faw-trucks.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+
+    .inner-hero {
+      position: relative;
+      min-height: 450px;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-on-dark);
+      padding: 24px;
+      background: var(--brand-navy-dark) center/cover no-repeat;
+      background-image: url('https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg');
+    }
+    .inner-hero::after { content: ''; position: absolute; inset: 0; background: rgba(14, 35, 64, 0.78); }
+    .inner-hero .inner { position: relative; z-index: 1; max-width: 800px; }
+    .inner-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 12px; }
+    .inner-hero p { font-size: clamp(1rem, 2vw, 1.2rem); opacity: 0.95; line-height: 1.5; }
+    @media (max-width: 768px) { .inner-hero { min-height: 320px; height: auto; padding: 48px 20px; } }
+
+    .section { padding: 80px 24px; }
+    .container { max-width: 1140px; margin: 0 auto; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .intro-grid h2 { font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 800; color: var(--text-strong); margin-bottom: 20px; }
+    .intro-grid p { margin-bottom: 16px; }
+    .intro-grid img { border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover; min-height: 280px; min-width: 0; }
+    @media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; } .intro-grid figure { order: -1; } }
+
+    .section-title { text-align: center; font-size: clamp(1.65rem, 3vw, 2.1rem); font-weight: 800; color: var(--text-strong); margin-bottom: 40px; }
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .model-card { display: flex; flex-direction: column; }
+    .model-card .thumb { height: 200px; overflow: hidden; }
+    .model-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .model-card .body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .model-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--text-strong); margin-bottom: 10px; }
+    .model-card p { font-size: 15px; margin-bottom: 14px; flex: 1; }
+    .model-card .specs { font-size: 13px; color: var(--text-body); line-height: 1.6; margin-bottom: 18px; }
+    .model-card .btn { margin-top: auto; display: block; text-align: center; padding: 12px; font-weight: 700; }
+    @media (max-width: 992px) { .model-grid { grid-template-columns: 1fr; } }
+
+    .features-navy { background: var(--brand-navy-dark); color: var(--text-on-dark); padding: 72px 24px; }
+    .features-navy h2 { text-align: center; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 40px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+    .feat-item { text-align: center; }
+    .feat-item .icon-circle { margin: 0 auto 12px; width: 52px; height: 52px; }
+    .feat-item .icon-circle i { font-size: 22px; }
+    .feat-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .feat-item p { font-size: 14px; opacity: 0.9; line-height: 1.6; }
+    @media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .feat-grid { grid-template-columns: 1fr; } }
+
+    .gallery-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 0 24px 80px; max-width: 1200px; margin: 0 auto; }
+    .gallery-row img { flex: 1 1 calc(25% - 16px); min-width: 200px; max-width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+
+    .cta-gradient { background: var(--gradient-navy); color: var(--text-on-dark); text-align: center; padding: 64px 24px; }
+    .cta-gradient h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 20px; }
+    .cta-gradient .row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .cta-gradient .btn-w { padding: 14px 26px; font-weight: 700; }
+    .cta-gradient .btn-o { padding: 14px 26px; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html"><img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager"></a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="active">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html">DAF Trucks</a>
+              <a href="faw-trucks.html" class="is-current">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html">DAF Trucks</a>
+      <a href="faw-trucks.html" class="current">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="inner-hero" aria-label="FAW Trucks">
+    <div class="inner">
+      <h1>FAW Trucks</h1>
+      <p>Built tough. Priced right. Ready for the work Ghana demands.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container intro-grid">
+      <div>
+        <p>FAW — First Automobile Works — is one of China's oldest and largest vehicle manufacturers, and their heavy truck division has become one of the most popular choices for commercial operators across Africa. There's a reason for that.</p>
+        <p>FAW trucks are built to work hard in conditions that would wear out lesser vehicles. They're cost-effective to buy, straightforward to maintain, and they've proven themselves on African roads time and time again. At Tratan Motors, we supply the FAW J6 and JH6 range — trucks that handle serious loads without drama.</p>
+      </div>
+      <figure>
+        <img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="FAW J5P tractor truck with semi-trailer" width="800" height="520" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface-alt);">
+    <div class="container">
+      <h2 class="section-title">FAW Range</h2>
+      <div class="model-grid">
+        <article class="model-card">
+          <div class="thumb"><img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="FAW JH6 tractor" width="900" height="600" loading="lazy"></div>
+          <div class="body">
+            <h3>FAW JH6 Tractor</h3>
+            <p>The FAW JH6 is a heavy-duty tractor head built for long-distance haulage. It pairs well with our trailer range and handles high GCW weights with ease.</p>
+            <p class="specs">420hp engine · 6x4 drive configuration · 12-speed gearbox · Sleeper cab</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+        <article class="model-card">
+          <div class="thumb"><img src="https://chinafawtruk.com/wp-content/uploads/Types-of-Faw-Truck-Faw-Tractor-Truck.webp" alt="FAW J6 cargo truck" width="800" height="500" loading="lazy"></div>
+          <div class="body">
+            <h3>FAW J6 Cargo Truck</h3>
+            <p>The J6 cargo truck is a reliable all-rounder. It's used across Ghana for construction materials, agricultural goods, and general freight — and it doesn't let people down.</p>
+            <p class="specs">Multiple engine options · High payload capacity · Robust chassis · Easy part availability</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+        <article class="model-card">
+          <div class="thumb"><img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="FAW 6x4 heavy hauler" width="800" height="500" loading="lazy"></div>
+          <div class="body">
+            <h3>FAW 6x4 Heavy Hauler</h3>
+            <p>When the load is heavy and the route is tough, this is the truck that handles it. Built for mining, construction, and heavy logistics operations that can't afford breakdowns.</p>
+            <p class="specs">420hp+ · Heavy-duty axles · Air suspension option · Extra fuel tank capacity</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-navy">
+    <h2>FAW Key Features</h2>
+    <div class="feat-grid">
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-dumbbell"></i></div>
+        <h3>Built for Africa</h3>
+        <p>FAW trucks have been tested and proven across the continent, from tarred highways to unpaved mine roads.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-coins"></i></div>
+        <h3>Cost Effective</h3>
+        <p>Lower purchase price, lower running costs, and widely available parts make FAW a smart investment.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Easy to Service</h3>
+        <p>FAW trucks are known for being straightforward to work on — less downtime, more productivity.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-truck"></i></div>
+        <h3>Heavy Payload</h3>
+        <p>Designed to carry serious loads without compromising on durability or performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery-row" aria-label="FAW gallery">
+    <img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="FAW JH6" width="400" height="200" loading="lazy">
+    <img src="https://chinafawtruk.com/wp-content/uploads/Types-of-Faw-Truck-Faw-Tractor-Truck.webp" alt="FAW tractor truck" width="400" height="200" loading="lazy">
+    <img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="FAW heavy haulage" width="400" height="200" loading="lazy">
+    <img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="FAW fleet" width="400" height="200" loading="lazy">
+  </div>
+
+  <section class="cta-gradient">
+    <h2>Want to Know More About FAW?</h2>
+    <div class="row">
+      <a class="btn-w" href="tel:0537685549">Call 0537685549</a>
+      <a class="btn-o" href="mailto:mlghana@hotmail.com">Email Us</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAF Trucks | Tratan Motors — European Engineering</title>
+  <meta name="description" content="DAF trucks from Tratan Motors: New Generation DAF XF, CF, and XG ranges for long hauls and heavy loads across Ghana.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/daf-trucks.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+
+    .inner-hero {
+      position: relative;
+      min-height: 450px;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-on-dark);
+      padding: 24px;
+      background: var(--brand-navy-dark) center/cover no-repeat;
+      background-image: url('https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-xf/2017035-daf-xf.jpg?mw=1200&rev=e1af57ede613411e81cebd6e44badbee&hash=2EA76AF71AD2B5BAD3315DA4BE8B5613');
+    }
+    .inner-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(14, 35, 64, 0.78);
+    }
+    .inner-hero .inner { position: relative; z-index: 1; max-width: 800px; }
+    .inner-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 12px; }
+    .inner-hero p { font-size: clamp(1rem, 2vw, 1.2rem); opacity: 0.95; line-height: 1.5; }
+    @media (max-width: 768px) { .inner-hero { min-height: 320px; height: auto; padding: 48px 20px; } }
+
+    .section { padding: 80px 24px; }
+    .container { max-width: 1140px; margin: 0 auto; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .intro-grid h2 { font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 800; color: var(--text-strong); margin-bottom: 20px; }
+    .intro-grid p { margin-bottom: 16px; }
+    .intro-grid img { border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%; object-fit: cover; min-height: 280px; min-width: 0; }
+    @media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; } .intro-grid figure { order: -1; } }
+
+    .section-title { text-align: center; font-size: clamp(1.65rem, 3vw, 2.1rem); font-weight: 800; color: var(--text-strong); margin-bottom: 40px; }
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .model-card { display: flex; flex-direction: column; }
+    .model-card .thumb { height: 200px; overflow: hidden; }
+    .model-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .model-card .body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .model-card h3 { font-size: 1.25rem; font-weight: 800; color: var(--text-strong); margin-bottom: 10px; }
+    .model-card p { font-size: 15px; margin-bottom: 14px; flex: 1; }
+    .model-card .specs { font-size: 13px; color: var(--text-body); line-height: 1.6; margin-bottom: 18px; }
+    .model-card .btn { margin-top: auto; display: block; text-align: center; padding: 12px; font-weight: 700; }
+    @media (max-width: 992px) { .model-grid { grid-template-columns: 1fr; } }
+
+    .features-navy { background: var(--brand-navy-dark); color: var(--text-on-dark); padding: 72px 24px; }
+    .features-navy h2 { text-align: center; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 40px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+    .feat-item { text-align: center; }
+    .feat-item .icon-circle { margin: 0 auto 12px; width: 52px; height: 52px; }
+    .feat-item .icon-circle i { font-size: 22px; }
+    .feat-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .feat-item p { font-size: 14px; opacity: 0.9; line-height: 1.6; }
+    @media (max-width: 900px) { .feat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .feat-grid { grid-template-columns: 1fr; } }
+
+    .gallery-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 0 24px 80px; max-width: 1200px; margin: 0 auto; }
+    .gallery-row img { flex: 1 1 calc(25% - 16px); min-width: 200px; max-width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
+    @media (max-width: 768px) { .gallery-row img { flex: 1 1 calc(50% - 8px); min-width: 140px; } }
+
+    .cta-gradient { background: var(--gradient-navy); color: var(--text-on-dark); text-align: center; padding: 64px 24px; }
+    .cta-gradient h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 20px; }
+    .cta-gradient .row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .cta-gradient .btn-w { padding: 14px 26px; font-weight: 700; }
+    .cta-gradient .btn-o { padding: 14px 26px; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html"><img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager"></a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html" class="active">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html" class="is-current">DAF Trucks</a>
+              <a href="faw-trucks.html">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html" class="current">DAF Trucks</a>
+      <a href="faw-trucks.html">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="inner-hero" aria-label="DAF Trucks">
+    <div class="inner">
+      <h1>DAF Trucks</h1>
+      <p>European engineering. Built for long hauls, heavy loads, and Ghana's toughest routes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container intro-grid">
+      <div>
+        <p>DAF Trucks come out of the Netherlands and carry with them a reputation that's been built over decades. They're known across Europe and increasingly across Africa for being efficient on fuel, comfortable for drivers, and tough enough to keep running even when the conditions aren't ideal.</p>
+        <p>At Tratan Motors, we supply the New Generation DAF range — trucks designed from the ground up with both performance and driver wellbeing in mind. Whether you're running long-distance freight or regional distribution, DAF trucks are a sound investment.</p>
+      </div>
+      <figure>
+        <img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-xf/2017035-daf-xf.jpg?mw=1200&rev=e1af57ede613411e81cebd6e44badbee&hash=2EA76AF71AD2B5BAD3315DA4BE8B5613" alt="DAF XF Euro 6 heavy-duty tractor unit" width="1200" height="800" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface-alt);">
+    <div class="container">
+      <h2 class="section-title">DAF Range</h2>
+      <div class="model-grid">
+        <article class="model-card">
+          <div class="thumb"><img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-xf/2017035-daf-xf.jpg?mw=1200&rev=e1af57ede613411e81cebd6e44badbee&hash=2EA76AF71AD2B5BAD3315DA4BE8B5613" alt="DAF XF Euro 6 tractor" width="1200" height="800" loading="lazy"></div>
+          <div class="body">
+            <h3>DAF XF</h3>
+            <p>The DAF XF is built for long-distance international transport. Spacious cab, excellent fuel economy, and seriously comfortable for drivers spending long hours on the road.</p>
+            <p class="specs">Engine up to 530hp · Euro 6 compliant · Automatic &amp; manual gearbox · Sleeper cab available</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+        <article class="model-card">
+          <div class="thumb"><img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-cf/2017080-cf-exterior.jpg?mw=1200&rev=b42099154c604dfca85c6f698910abe5&hash=EBC0EAD49503FA7472724D1CC74FEC50" alt="DAF CF Euro 6 exterior" width="1200" height="800" loading="lazy"></div>
+          <div class="body">
+            <h3>DAF CF</h3>
+            <p>The DAF CF is a versatile mid-range truck ideal for regional and national distribution. Reliable, efficient, and easy to maintain — a practical choice for growing fleets.</p>
+            <p class="specs">Engine up to 450hp · Multiple body configurations · Strong payload capacity · Advanced safety systems</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+        <article class="model-card">
+          <div class="thumb"><img src="https://www.daf.com/-/media/images/press-releases/product-introductions/2024/unique-daf-xg-plus-edition-marks-75-years-of-truck-production-01.jpg?h=2240&w=3360&rev=a424b5f763764b43b2fc36f3f6f9e3a8&hash=5EEBC81DC645051CCA31C49DD86E519E" alt="DAF XG+ special edition truck cab" width="3360" height="2240" loading="lazy"></div>
+          <div class="body">
+            <h3>DAF XG / XG+</h3>
+            <p>The flagship of the DAF lineup. The XG and XG+ represent the very top of what European truck engineering can offer — maximum cab space, top-tier efficiency, and premium comfort.</p>
+            <p class="specs">Up to 530hp · Largest cab in its class · Advanced driver assistance · Industry-leading aerodynamics</p>
+            <a class="btn" href="contact.html">Enquire About This Model</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-navy">
+    <h2>DAF Key Features</h2>
+    <div class="feat-grid">
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-gear"></i></div>
+        <h3>Fuel Efficiency</h3>
+        <p>DAF's PACCAR engines are optimized to get the most out of every drop — which matters a lot when you're running a fleet.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-couch"></i></div>
+        <h3>Driver Comfort</h3>
+        <p>More comfort means less fatigue, better performance, and fewer accidents. DAF takes driver welfare seriously.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-wrench"></i></div>
+        <h3>Low Maintenance Costs</h3>
+        <p>Parts are accessible and service intervals are designed to minimize downtime for your operation.</p>
+      </div>
+      <div class="feat-item">
+        <div class="icon-circle light"><i class="fa-solid fa-globe"></i></div>
+        <h3>Proven Across Africa</h3>
+        <p>DAF trucks have been put through their paces on African roads and come out on top.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery-row" aria-label="DAF gallery">
+    <img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-xf/2017035-daf-xf.jpg?mw=1200&rev=e1af57ede613411e81cebd6e44badbee&hash=2EA76AF71AD2B5BAD3315DA4BE8B5613" alt="DAF XF Euro 6" width="1200" height="800" loading="lazy">
+    <img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-cf/2017080-cf-exterior.jpg?mw=1200&rev=b42099154c604dfca85c6f698910abe5&hash=EBC0EAD49503FA7472724D1CC74FEC50" alt="DAF CF Euro 6" width="1200" height="800" loading="lazy">
+    <img src="https://www.daf.com/-/media/images/press-releases/product-introductions/2024/unique-daf-xg-plus-edition-marks-75-years-of-truck-production-01.jpg?h=2240&w=3360&rev=a424b5f763764b43b2fc36f3f6f9e3a8&hash=5EEBC81DC645051CCA31C49DD86E519E" alt="DAF XG+ edition" width="3360" height="2240" loading="lazy">
+    <img src="https://www.daf.global/-/media/images/daf-trucks/trucks/euro-6/daf-xf/2017035-daf-xf.jpg?mw=1200&rev=e1af57ede613411e81cebd6e44badbee&hash=2EA76AF71AD2B5BAD3315DA4BE8B5613" alt="DAF XF long-haul tractor" width="1200" height="800" loading="lazy">
+  </div>
+
+  <section class="cta-gradient">
+    <h2>Interested in a DAF Truck?</h2>
+    <div class="row">
+      <a class="btn-w" href="tel:0537685549">Call 0537685549</a>
+      <a class="btn-o" href="mailto:mlghana@hotmail.com">Email Us</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+    })();
+  </script>
+</body>
+</html>

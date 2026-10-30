@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratan Motors | DAF & FAW Trucks and Trailers in Ghana</title>
+  <meta name="description" content="Tratan Motors supplies premium DAF Trucks, FAW Trucks, and trailers across Ghana. Contact us on 0537685549 or mlghana@hotmail.com.">
+  <meta name="keywords" content="DAF trucks Ghana, FAW trucks Ghana, trailers Ghana, truck supplier Ghana, Tratan Motors, heavy trucks Ghana">
+  <meta property="og:title" content="Tratan Motors | Trucks & Trailers in Ghana">
+  <meta property="og:description" content="Premium DAF and FAW trucks and trailers supplied across Ghana. Built for tough conditions.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/index.html">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+    body { background: var(--surface-alt); }
+
+    /* —— Hero slider —— */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 420px;
+      overflow: hidden;
+      background: var(--brand-navy-dark);
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+    }
+    .hero-slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 1;
+    }
+    .hero-slide img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+    }
+    .hero-slide.is-active img {
+      animation: kenburns 6s ease-out forwards;
+    }
+    @keyframes kenburns {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-overlay);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--text-on-dark);
+    }
+    .hero-content h1 {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 720px;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.25);
+    }
+    .hero-content p.sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 560px;
+      opacity: 0.95;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .hero-buttons a {
+      padding: 14px 26px;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: var(--radius-sm);
+      transition: transform 0.2s, background 0.2s, border-color 0.2s;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.35);
+      color: var(--text-strong);
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .slider-arrow:hover { background: rgba(255,255,255,0.55); }
+    .slider-arrow.prev { left: 16px; }
+    .slider-arrow.next { right: 16px; }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      gap: 10px;
+    }
+    .slider-dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .slider-dots button.is-active {
+      background: var(--brand-orange);
+      transform: scale(1.15);
+    }
+
+    @media (max-width: 768px) {
+      .hero { height: 70vh; min-height: 380px; }
+      .hero-slide::after { background: rgba(14, 35, 64, 0.78); }
+      .slider-arrow { width: 40px; height: 40px; font-size: 18px; top: auto; bottom: 13px; transform: none; }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 56px 16px; }
+      .hero-content { padding: 0 16px; }
+    }
+
+    /* —— Intro stats strip —— */
+    .stats-strip {
+      background: var(--brand-navy);
+      color: var(--text-on-dark);
+      padding: 40px 24px;
+    }
+    .stats-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .stat-block {
+      padding: 0 16px;
+    }
+    .stat-block .num {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      display: block;
+    }
+    .stat-block .cap {
+      font-size: 14px;
+      opacity: 0.88;
+      margin-top: 8px;
+      color: var(--text-on-dark);
+    }
+
+    /* —— Section shells —— */
+    .section { padding: 80px 24px; }
+    .section--tight { padding-top: 60px; padding-bottom: 60px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h2.section-title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--text-strong);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    p.section-sub {
+      text-align: center;
+      color: var(--text-body);
+      max-width: 640px;
+      margin: 0 auto 48px;
+      font-size: 1.05rem;
+    }
+
+    /* —— About —— */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-grid h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 20px;
+    }
+    .about-grid p { margin-bottom: 16px; }
+    .about-grid .btn-red {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 28px;
+      font-weight: 700;
+    }
+    .about-grid figure img {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      min-height: 280px;
+      min-width: 0;
+    }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-grid figure { order: -1; }
+    }
+
+    /* —— Product cards —— */
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .product-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card .thumb {
+      height: 220px;
+      overflow: hidden;
+    }
+    .product-card .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-card .body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .product-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+    }
+    .product-card p { flex: 1; margin-bottom: 20px; font-size: 15px; }
+    .product-card .btn-card {
+      width: 100%;
+      padding: 14px;
+      text-align: center;
+      font-weight: 700;
+    }
+    @media (max-width: 992px) { .cards-3 { grid-template-columns: 1fr; } }
+
+    /* —— Why choose —— */
+    .why-section {
+      background: var(--brand-navy-dark);
+      color: var(--text-on-dark);
+      padding: 80px 24px;
+    }
+    .why-section h2 {
+      text-align: center;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 48px;
+      color: var(--text-on-dark);
+    }
+    .why-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .why-item {
+      text-align: center;
+    }
+    .why-item .icon-circle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .why-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+    .why-item p { font-size: 14px; opacity: 0.9; line-height: 1.65; }
+    @media (max-width: 900px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+
+    /* —— Gallery —— */
+    .gallery-section { background: var(--surface-alt); overflow: hidden; }
+    .gallery-track-wrap { overflow: hidden; margin-top: 8px; }
+    .gallery-track {
+      display: flex;
+      gap: 16px;
+      padding: 8px 0 16px;
+    }
+    .gallery-track.desktop-row {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .gallery-item {
+      position: relative;
+      flex: 0 0 auto;
+      width: calc(25% - 12px);
+      min-width: 240px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item::after {
+      content: '\f06e';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--text-on-dark);
+      position: absolute;
+      inset: 0;
+      background: rgba(14, 35, 64, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .gallery-track.marquee {
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .gallery-track.marquee .gallery-item { width: 280px; min-width: 280px; }
+    @media (max-width: 768px) {
+      .gallery-track.desktop-row { display: none; }
+      .gallery-track.marquee-mobile {
+        display: flex !important;
+        width: max-content;
+        animation: marquee 24s linear infinite;
+      }
+    }
+    @media (min-width: 769px) {
+      .gallery-track.marquee-mobile { display: none !important; }
+    }
+
+    /* —— CTA gradient banner —— */
+    .cta-banner {
+      background: var(--gradient-navy);
+      padding: 64px 24px;
+      text-align: center;
+      color: var(--text-on-dark);
+    }
+    .cta-banner h2 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .cta-banner p { max-width: 640px; margin: 0 auto 28px; opacity: 0.95; font-size: 1.05rem; }
+    .cta-banner .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .cta-banner .btn-white {
+      padding: 14px 28px;
+      font-weight: 700;
+    }
+    .cta-banner .btn-outline-w {
+      padding: 14px 28px;
+      font-weight: 700;
+    }
+
+    /* —— Contact strip —— */
+    .contact-strip {
+      background: var(--surface-alt);
+      padding: 56px 24px;
+    }
+    .contact-trio {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .contact-trio .contact-icon {
+      margin: 0 auto 14px;
+      display: flex;
+      width: 48px;
+      height: 48px;
+    }
+    .contact-trio strong { display: block; color: var(--text-strong); font-size: 15px; margin-bottom: 6px; }
+    .contact-trio span, .contact-trio a { color: var(--text-body); font-size: 15px; }
+    @media (max-width: 768px) {
+      .contact-trio { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html">
+        <img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager">
+      </a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html">DAF Trucks</a>
+              <a href="faw-trucks.html">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html" class="current">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html">DAF Trucks</a>
+      <a href="faw-trucks.html">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="hero" id="heroSlider" aria-label="Featured fleet highlights">
+    <div class="hero-slide is-active" data-index="0">
+      <img src="https://www.daf.co.uk/-/media/images/daf-trucks/trucks/new-generation-daf-range-02.png" alt="New Generation DAF truck range for long-haul logistics in Ghana" width="1920" height="1080" fetchpriority="high" decoding="async">
+      <div class="hero-content">
+        <h1>Built for Ghana's Roads. Built to Last.</h1>
+        <p class="sub">We supply premium DAF and FAW trucks that keep your business moving — no matter the terrain.</p>
+        <div class="hero-buttons">
+          <a class="btn-solid" href="products.html">Explore Our Fleet</a>
+          <a class="btn-outline" href="contact.html">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="1">
+      <img src="https://autoline.com.gh/blog/wp-content/uploads/2025/11/daf-1200x675.png" alt="DAF heavy truck — European engineering for Ghanaian fleets" width="1200" height="675" loading="lazy" decoding="async">
+      <div class="hero-content">
+        <h1>DAF Trucks — European Engineering, Local Reliability</h1>
+        <p class="sub">The New Generation DAF range delivers power, efficiency, and driver comfort across long hauls.</p>
+        <div class="hero-buttons">
+          <a class="btn-solid" href="products.html">Explore Our Fleet</a>
+          <a class="btn-outline" href="contact.html">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="2">
+      <img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="FAW heavy-duty truck for construction and logistics in Ghana" width="1200" height="800" loading="lazy" decoding="async">
+      <div class="hero-content">
+        <h1>FAW Trucks — Heavy Duty, Proven Performance</h1>
+        <p class="sub">Trusted across Africa for their toughness. FAW trucks are the backbone of serious transport operations.</p>
+        <div class="hero-buttons">
+          <a class="btn-solid" href="products.html">Explore Our Fleet</a>
+          <a class="btn-outline" href="contact.html">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" data-index="3">
+      <img src="https://www.stewart-trailers.co.uk/uploads/_AUTOx960_crop_center-center_90_none/LL-HERO.png" alt="Tri-axle low-loader trailer for heavy machinery haulage" width="960" height="540" loading="lazy" decoding="async">
+      <div class="hero-content">
+        <h1>Complete Trailer Solutions for Every Load</h1>
+        <p class="sub">From flatbeds to lowbeds, we've got the trailer that fits your cargo — built for serious freight.</p>
+        <div class="hero-buttons">
+          <a class="btn-solid" href="products.html">Explore Our Fleet</a>
+          <a class="btn-outline" href="contact.html">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="slider-arrow prev" id="prevSlide" aria-label="Previous slide">‹</button>
+    <button type="button" class="slider-arrow next" id="nextSlide" aria-label="Next slide">›</button>
+    <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Slide indicators"></div>
+  </section>
+
+  <section class="stats-strip" aria-label="Brand partnerships">
+    <div class="stats-inner">
+      <div class="stat-block">
+        <span class="num">DAF &amp; FAW</span>
+        <span class="cap">Authorized distribution</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <h2>Who We Are</h2>
+        <p>Tratan Motors has been in the business of supplying heavy-duty trucks and trailers to companies across Ghana for over a decade. We work directly with two of the world's most respected truck manufacturers — DAF Trucks from Europe and FAW Trucks from China — to bring reliable, high-performing vehicles to the Ghanaian market.</p>
+        <p>Whether you're running a mining operation, managing a logistics fleet, or growing a construction company, we understand that the right truck isn't just a purchase — it's a decision that affects your entire business. That's why we take time to understand what you actually need before recommending anything.</p>
+        <p>We're based in Ghana and we know these roads. We know the conditions, the loads, and what it takes for a truck to hold up over time. That local knowledge, combined with access to world-class vehicles, is what sets us apart.</p>
+        <a class="btn-red" href="about.html">Learn More About Us</a>
+      </div>
+      <figure>
+        <img src="https://www.greenhousdaftelford.co.uk/content/images/119/video_grid/mobile/new-generation-daf-xf-tipper.png" alt="New Generation DAF XF tipper truck supplied through Tratan Motors" width="800" height="600" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="fleet" style="background:var(--surface-alt);">
+    <div class="container">
+      <h2 class="section-title">Our Fleet</h2>
+      <p class="section-sub">We carry two of the most trusted truck brands on the market — plus a full range of trailers to match.</p>
+      <div class="cards-3">
+        <article class="product-card">
+          <div class="thumb">
+            <img src="https://www.daf.co.uk/-/media/images/daf-trucks/trucks/new-generation-daf-range-02.png" alt="DAF trucks — efficient long-haul vehicles for Ghana" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <h3>DAF Trucks</h3>
+            <p>DAF trucks are built to European standards — fuel efficient, driver-friendly, and seriously durable. Great for long-distance haulage and highway logistics.</p>
+            <a class="btn-card" href="daf-trucks.html">View DAF Range</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb">
+            <img src="https://chinafawtruk.com/wp-content/uploads/Types-of-Faw-Truck-Faw-Tractor-Truck.webp" alt="FAW tractor truck — heavy-duty transport for African roads" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <h3>FAW Trucks</h3>
+            <p>FAW has become one of the most popular heavy truck brands across Africa — and for good reason. They're tough, cost-effective, and built to handle the kind of work that breaks weaker trucks.</p>
+            <a class="btn-card" href="faw-trucks.html">View FAW Range</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb">
+            <img src="https://xlspecializedtrailer.com/wp-content/uploads/2024/01/Solutions-for-Your-Biggest-Loads-1024x576.jpg" alt="Specialized flatbed and heavy-load trailers" width="1024" height="576" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <h3>Trailers</h3>
+            <p>We stock a wide selection of semi-trailers — flatbeds, lowbeds, sidewalls, and more. Whether you're hauling timber, machinery, or general cargo, we have the right trailer for the job.</p>
+            <a class="btn-card" href="trailers.html">View Trailers</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-section" id="why-us">
+    <h2>Why Choose Us</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon-circle"><i class="fa-solid fa-truck"></i></div>
+        <h3>Direct Supply Chain</h3>
+        <p>We work directly with DAF and FAW, which means no unnecessary markups and faster delivery timelines.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><i class="fa-solid fa-headset"></i></div>
+        <h3>After-Sales Support</h3>
+        <p>Getting a truck from us doesn't end at delivery. We're available for follow-up support and guidance after every sale.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><i class="fa-solid fa-map"></i></div>
+        <h3>Local Market Knowledge</h3>
+        <p>We know Ghana's roads, regulations, and industry demands better than any foreign supplier.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+        <h3>Real People, Real Answers</h3>
+        <p>When you call us, you speak to someone who actually knows the products and can help you make the right call.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">A Glimpse of What We Carry</h2>
+    </div>
+    <div class="gallery-track-wrap">
+      <div class="gallery-track desktop-row" aria-hidden="false">
+        <div class="gallery-item"><img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="FAW J5P tractor with semi-trailer for heavy haulage" width="400" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://goodpappa.com/wp-content/uploads/2025/06/3-Axle-Timber-Log-Trailer.webp" alt="3-axle timber log trailer for haulage" width="400" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.china-cimc.com/uploads/201918541/sidewall-truck-trailer54208827526.jpg" alt="Sidewall truck trailer for general cargo" width="400" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="FAW heavy-duty truck in fleet gallery" width="400" height="200" loading="lazy"></div>
+      </div>
+      <div class="gallery-track marquee marquee-mobile" aria-hidden="true">
+        <div class="gallery-item"><img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://goodpappa.com/wp-content/uploads/2025/06/3-Axle-Timber-Log-Trailer.webp" alt="3-axle timber log trailer" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.china-cimc.com/uploads/201918541/sidewall-truck-trailer54208827526.jpg" alt="" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://image.made-in-china.com/365f3j00HhevGcCoLkbj/New-FAW-J5p-Tractor-Truck-Semi-Trailer-Pulling-Vehicles-6X4-420h-Heavy-Haulage-Equipment.webp" alt="" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://goodpappa.com/wp-content/uploads/2025/06/3-Axle-Timber-Log-Trailer.webp" alt="Timber log trailer" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.china-cimc.com/uploads/201918541/sidewall-truck-trailer54208827526.jpg" alt="" width="280" height="200" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://www.faw.co.za/wp-content/uploads/2022/08/jh6-33-420ft.jpg" alt="" width="280" height="200" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="cta-talk">
+    <h2>Ready to Talk Trucks?</h2>
+    <p>Whether you know exactly what you need or you're still figuring it out — give us a call or send a message. Our team is happy to walk you through everything.</p>
+    <div class="row">
+      <a class="btn-white" href="tel:0537685549">Call Us Now: 0537685549</a>
+      <a class="btn-outline-w" href="mailto:mlghana@hotmail.com">Send Us an Email</a>
+    </div>
+  </section>
+
+  <section class="contact-strip" id="contact-strip">
+    <div class="contact-trio">
+      <div>
+        <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+        <strong>Phone</strong>
+        <a href="tel:0537685549">0537685549</a>
+      </div>
+      <div>
+        <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+        <strong>Email</strong>
+        <a href="mailto:mlghana@hotmail.com">mlghana@hotmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-slide'));
+      var total = slides.length;
+      var current = 0;
+      var dotsWrap = document.getElementById('sliderDots');
+      var autoplayMs = 5000;
+      var timer;
+
+      for (var i = 0; i < total; i++) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        if (i === 0) b.classList.add('is-active');
+        b.addEventListener('click', function (idx) {
+          return function () { goTo(idx); resetTimer(); };
+        }(i));
+        dotsWrap.appendChild(b);
+      }
+      var dots = dotsWrap.querySelectorAll('button');
+
+      function goTo(index) {
+        current = (index + total) % total;
+        slides.forEach(function (el, j) {
+          el.classList.toggle('is-active', j === current);
+          var img = el.querySelector('img');
+          if (img) {
+            img.style.animation = 'none';
+            if (j === current) void img.offsetWidth;
+            if (j === current) img.style.animation = '';
+          }
+        });
+        dots.forEach(function (d, j) { d.classList.toggle('is-active', j === current); });
+      }
+
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(next, autoplayMs);
+      }
+
+      document.getElementById('nextSlide').addEventListener('click', function () { next(); resetTimer(); });
+      document.getElementById('prevSlide').addEventListener('click', function () { prev(); resetTimer(); });
+
+      resetTimer();
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) clearInterval(timer);
+        else resetTimer();
+      });
+    })();
+  </script>
+</body>
+</html>

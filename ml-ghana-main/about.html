@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Tratan Motors — DAF &amp; FAW Trucks in Ghana</title>
+  <meta name="description" content="Learn how Tratan Motors supplies DAF and FAW trucks and trailers to Ghana's transport, construction, and agricultural sectors.">
+  <meta name="keywords" content="Tratan Motors, about Tratan Motors, truck dealer Ghana, DAF FAW Ghana">
+  <meta property="og:title" content="About Tratan Motors | Trucks &amp; Trailers in Ghana">
+  <meta property="og:description" content="Your trusted partner in heavy-duty logistics. We partner with clients — we don't just sell trucks.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/about.html">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+
+    /* Page hero */
+    .page-hero {
+      position: relative;
+      min-height: 46vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--text-on-dark);
+      padding: 80px 24px 64px;
+      background: var(--brand-navy-dark) center/cover no-repeat;
+      background-image:
+        linear-gradient(rgba(14, 35, 64, 0.78), rgba(14, 35, 64, 0.78)),
+        url('https://autoline.com.gh/blog/wp-content/uploads/2025/11/daf-1200x675.png');
+    }
+    .page-hero h1 {
+      font-size: clamp(1.85rem, 4.5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 900px;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .page-hero p.lead {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      max-width: 640px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    .section { padding: 80px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .story-grid h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 24px;
+    }
+    .story-grid p { margin-bottom: 18px; }
+    .story-grid figure img {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      min-height: 280px;
+      min-width: 0;
+      object-fit: cover;
+    }
+    @media (max-width: 900px) {
+      .story-grid { grid-template-columns: 1fr; }
+      .story-grid figure { order: -1; }
+    }
+
+    .apart-section { background: var(--surface-alt); }
+    .apart-section h2 {
+      text-align: center;
+      font-size: clamp(1.65rem, 3vw, 2.1rem);
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 48px;
+    }
+    .apart-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .apart-card {
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .apart-card .icon-circle {
+      margin: 0 auto 18px;
+      background: var(--gradient-brand);
+    }
+    .apart-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-strong);
+      margin-bottom: 12px;
+    }
+    .apart-card p { font-size: 15px; line-height: 1.65; }
+    @media (max-width: 900px) {
+      .apart-grid { grid-template-columns: 1fr; }
+    }
+
+    .leadership {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .leadership h2 {
+      font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 24px;
+    }
+    .leadership p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .about-cta-navy {
+      background: var(--brand-navy);
+      color: var(--text-on-dark);
+      padding: 72px 24px;
+      text-align: center;
+    }
+    .about-cta-navy h2 {
+      font-size: clamp(1.65rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .about-cta-navy > .container > p {
+      margin-bottom: 28px;
+      opacity: 0.92;
+      font-size: 1.1rem;
+    }
+    .about-cta-navy .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .about-cta-navy .btn-primary {
+      padding: 14px 28px;
+      font-weight: 700;
+    }
+    .about-cta-navy .btn-outline {
+      padding: 14px 28px;
+      font-weight: 700;
+    }
+    @media (max-width: 480px) {
+      .section { padding: 56px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html">
+        <img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager">
+      </a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html">DAF Trucks</a>
+              <a href="faw-trucks.html">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="current">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html">DAF Trucks</a>
+      <a href="faw-trucks.html">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="page-hero" aria-label="About page introduction">
+    <div class="container">
+      <h1>Driving Ghana's Industries Forward.</h1>
+      <p class="lead">Your trusted partner in heavy-duty logistics and transport solutions.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container story-grid">
+      <div>
+        <h2>Our Story &amp; Mission</h2>
+        <p>At TRATAN MOTORS, we know that your business doesn't stop, and neither should your fleet. We are a specialized commercial vehicle dealership dedicated to outfitting Ghana's transport, construction, and agricultural sectors with machinery they can truly count on.</p>
+        <p>We don't just sell trucks; we partner with our clients. We focus our expertise on the brands that matter most to performance on African roads: DAF and FAW. Whether you need the long-haul efficiency of a DAF tractor, the rugged durability of a FAW tipper, or a specialized low-bed trailer, we source and supply the exact machinery required to keep your operations running profitably.</p>
+      </div>
+      <figure>
+        <img src="https://chinafawtruk.com/wp-content/uploads/Types-of-Faw-Truck-Faw-Tractor-Truck.webp" alt="FAW tractor truck — heavy-duty commercial vehicle supplied by Tratan Motors" width="800" height="520" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section apart-section">
+    <div class="container">
+      <h2>What Sets Us Apart</h2>
+      <div class="apart-grid">
+        <article class="apart-card">
+          <div class="icon-circle"><i class="fa-solid fa-award"></i></div>
+          <h3>Specialized Expertise</h3>
+          <p>We handpick our DAF and FAW ranges based on real-world performance. We cut through the jargon to give you straight, practical advice.</p>
+        </article>
+        <article class="apart-card">
+          <div class="icon-circle"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Comprehensive Solutions</h3>
+          <p>From the chassis to the trailer, we match the perfect truck with the perfect hauling equipment for your specific loads.</p>
+        </article>
+        <article class="apart-card">
+          <div class="icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Unwavering Reliability</h3>
+          <p>We believe in honest pricing, transparent communication, and supplying road-ready vehicles that minimize your downtime.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container leadership">
+      <h2>A Word on Leadership</h2>
+      <p>TRATAN MOTORS is built on a foundation of long-term relationships. We take the time to listen to your capacity needs and budget, ensuring you drive away with an asset that immediately adds value to your company. When your fleet succeeds, we succeed.</p>
+    </div>
+  </section>
+
+  <section class="about-cta-navy">
+    <div class="container">
+      <h2>Ready to build your perfect fleet?</h2>
+      <p>Let's talk about your haulage needs.</p>
+      <div class="row">
+        <a class="btn-primary" href="contact.html">Contact Us Today</a>
+        <a class="btn-outline" href="index.html#fleet">Browse Our Trucks</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+    })();
+  </script>
+</body>
+</html>

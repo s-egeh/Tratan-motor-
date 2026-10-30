@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Tratan Motors — Fleet Solutions &amp; Support</title>
+  <meta name="description" content="Tratan Motors: truck and trailer supply, fleet consultation, procurement, trade-in, and after-sales support across Ghana.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mlghana.com/services.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#16365C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/brand.css">
+  <style>
+
+    /* Hero: solid navy + subtle grid + faint route lines */
+    .services-hero {
+      position: relative;
+      background-color: var(--brand-navy);
+      background-image:
+        radial-gradient(ellipse 120% 80% at 50% 100%, rgba(0,0,0,0.2) 0%, transparent 50%),
+        repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255,255,255,0.04) 31px, rgba(255,255,255,0.04) 32px),
+        repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(255,255,255,0.03) 31px, rgba(255,255,255,0.03) 32px),
+        var(--gradient-navy);
+      color: var(--text-on-dark);
+      text-align: center;
+      padding: 80px 24px 88px;
+      overflow: hidden;
+    }
+    .services-hero::before {
+      content: '\f0d1';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      font-size: min(42vw, 280px);
+      opacity: 0.06;
+      right: -5%;
+      bottom: -15%;
+      pointer-events: none;
+      line-height: 1;
+    }
+    .services-hero .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-orange-light);
+      margin-bottom: 14px;
+    }
+    .services-hero h1 {
+      font-size: clamp(1.65rem, 4vw, 2.65rem);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 920px;
+      margin: 0 auto 16px;
+    }
+    .services-hero .sub { font-size: clamp(1rem, 2vw, 1.2rem); opacity: 0.93; max-width: 720px; margin: 0 auto 12px; line-height: 1.65; }
+    .services-hero .sub2 { font-size: clamp(0.95rem, 1.8vw, 1.05rem); opacity: 0.88; max-width: 680px; margin: 0 auto; line-height: 1.65; }
+
+    .section { padding: 80px 24px; }
+    .container { max-width: 1140px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 800; color: var(--text-strong); margin-bottom: 12px; }
+    .section-lead { text-align: center; max-width: 700px; margin: 0 auto 48px; color: var(--text-body); font-size: 1.05rem; }
+
+    .core-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 8px; }
+    .core-card {
+      padding: 28px 24px;
+    }
+    .core-card .icon-circle { margin-left: 0; background: var(--gradient-brand); }
+    .core-card .icon-circle i { font-size: 22px; }
+    .core-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--text-strong); margin-bottom: 12px; }
+    .core-card p { font-size: 15px; line-height: 1.7; }
+    @media (max-width: 900px) { .core-3 { grid-template-columns: 1fr; } }
+
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .svc-card { padding: 28px 24px; }
+    .svc-card .icon-circle {
+      border-radius: var(--radius-md);
+      background: var(--gradient-brand);
+      margin-left: 0;
+    }
+    .svc-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--text-strong); margin-bottom: 12px; }
+    .svc-card p { font-size: 15px; color: var(--text-body); line-height: 1.7; }
+    @media (max-width: 900px) { .svc-grid { grid-template-columns: 1fr; } }
+
+    .process-section { background: var(--surface-alt); }
+    .process-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; align-items: stretch; }
+    .process-step { position: relative; background: var(--surface); border-radius: var(--radius-md); padding: 24px 20px; box-shadow: var(--shadow-sm); }
+    .process-step .step-number {
+      background: var(--gradient-brand);
+      margin-bottom: 14px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .process-step h3 { font-size: 1rem; font-weight: 800; color: var(--text-strong); margin-bottom: 10px; }
+    .process-step p { font-size: 14px; line-height: 1.65; color: var(--text-body); }
+    @media (max-width: 900px) { .process-flow { grid-template-columns: 1fr; } }
+
+    .industries { text-align: center; }
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 0 auto; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 20px; border-radius: 999px;
+      background: var(--surface-alt); color: var(--text-strong);
+      font-weight: 600; font-size: 15px;
+      border: 1px solid var(--border);
+    }
+
+    .cta-gradient {
+      background: var(--gradient-navy);
+      color: var(--text-on-dark);
+      text-align: center;
+      padding: 64px 24px;
+    }
+    .cta-gradient h2 { font-size: clamp(1.45rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 12px; }
+    .cta-gradient .cta-lead { max-width: 560px; margin: 0 auto 24px; opacity: 0.95; font-size: 1.05rem; line-height: 1.6; }
+    .cta-gradient .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+    .cta-gradient .btn-contact {
+      padding: 14px 28px; font-weight: 800;
+    }
+    .cta-gradient .btn-w { padding: 14px 22px; font-weight: 700; }
+    .cta-gradient .btn-o { padding: 14px 22px; font-weight: 700; }
+    @media (max-width: 480px) { .section { padding: 56px 16px; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="logo-link" href="index.html"><img src="assets/tratan-logo.png" alt="Tratan Motors" loading="eager"></a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="products.html">Products</a>
+            <div class="dropdown-panel">
+              <a href="products.html">Our Fleet</a>
+              <a href="daf-trucks.html">DAF Trucks</a>
+              <a href="faw-trucks.html">FAW Trucks</a>
+              <a href="trailers.html">Trailers</a>
+            </div>
+          </li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn-nav-cta" href="contact.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Our Fleet</a>
+    <span style="font-weight:800;color:var(--text-strong);padding:16px 0 8px;text-transform:uppercase;font-size:12px;letter-spacing:2px;">Products</span>
+    <div class="sub">
+      <a href="daf-trucks.html">DAF Trucks</a>
+      <a href="faw-trucks.html">FAW Trucks</a>
+      <a href="trailers.html">Trailers</a>
+    </div>
+    <a href="services.html" class="current">Services</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn-nav-cta" href="contact.html">Get a Quote</a>
+  </div>
+
+  <section class="services-hero" aria-label="Services introduction">
+    <div class="container">
+      <p class="eyebrow">What We Do</p>
+      <h1>More Than Just Trucks. Comprehensive Fleet Solutions.</h1>
+      <p class="sub">Beyond supplying trucks and trailers, we support your business every step of the way.</p>
+      <p class="sub2">We provide end-to-end support to ensure your transport operations run efficiently and profitably across Ghana.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Strategy, sourcing &amp; ongoing support</h2>
+      <p class="section-lead">Consultative support for fleet managers and owners — from first conversation to keeping your vehicles on the road.</p>
+      <div class="core-3">
+        <article class="core-card">
+          <div class="icon-circle"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Fleet consultation &amp; strategy</h3>
+          <p>Not sure which truck and trailer combination is best for your contracts? We offer expert consultation to analyze your payload requirements, routes, and budget, ensuring you invest in the exact machinery that maximizes your ROI.</p>
+        </article>
+        <article class="core-card">
+          <div class="icon-circle"><i class="fa-solid fa-globe"></i></div>
+          <h3>Vehicle sourcing &amp; procurement</h3>
+          <p>Looking for a highly specific DAF or FAW configuration? We leverage our extensive industry network to source the exact heavy-duty vehicles you need, handling the logistics of getting them ready for Ghanaian roads.</p>
+        </article>
+        <article class="core-card">
+          <div class="icon-circle"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Technical guidance &amp; support</h3>
+          <p>Our commitment doesn't end when you receive the keys. We provide ongoing technical advice, maintenance recommendations, and guidance on sourcing genuine parts to keep your fleet's downtime to an absolute minimum.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface-alt);">
+    <div class="container">
+      <h2 class="section-title">How we help</h2>
+      <p class="section-lead">Everything we offer in one place — from supply and sourcing to trade-ins and after-sales care.</p>
+      <div class="svc-grid" style="margin-bottom:28px;">
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-truck"></i></div>
+          <h3>Truck Supply — DAF &amp; FAW</h3>
+          <p>We source and supply brand-new DAF and FAW trucks directly to businesses across Ghana. Whether you need one truck or a whole fleet, we handle the process from start to delivery.</p>
+        </article>
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-truck-moving"></i></div>
+          <h3>Trailer Supply</h3>
+          <p>We stock a range of semi-trailers — flatbeds, lowbeds, sidewalls, timber trailers — suitable for a wide variety of cargo and haulage operations across Ghana.</p>
+        </article>
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Fleet Consultation</h3>
+          <p>Not sure what you need? We sit down with you, understand your operation, and recommend the right combination of trucks and trailers for your specific requirements — no guesswork.</p>
+        </article>
+      </div>
+      <div class="svc-grid">
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-box"></i></div>
+          <h3>Procurement &amp; Sourcing</h3>
+          <p>If you need something we don't have in stock, we can source it. Our manufacturer relationships mean we can get you what you need with shorter lead times than going direct.</p>
+        </article>
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-rotate"></i></div>
+          <h3>Trade-In &amp; Upgrade</h3>
+          <p>Already running a fleet and looking to upgrade? Talk to us about trade-in options. We'll assess what you have and help you transition to newer, more efficient vehicles.</p>
+        </article>
+        <article class="svc-card">
+          <div class="icon-circle"><i class="fa-solid fa-headset"></i></div>
+          <h3>After-Sales Support</h3>
+          <p>We don't disappear after the sale. If you have questions, need guidance, or run into issues, we're reachable. Call or email and someone will get back to you.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process-section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-lead">A straightforward process — built around conversation, not paperwork for its own sake.</p>
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Get in Touch</h3>
+          <p>Call or email us. Tell us what you're working with and what you're looking for. No forms, no waiting — just a real conversation.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>We Assess Your Needs</h3>
+          <p>We ask the right questions to understand your operation, load requirements, budget, and timeline.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>We Recommend &amp; Quote</h3>
+          <p>Based on what we learn, we put together a clear recommendation and a transparent quote. No hidden costs.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Delivery &amp; Follow-Up</h3>
+          <p>We arrange delivery and follow up after to make sure everything is working the way it should.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section industries">
+    <div class="container">
+      <h2 class="section-title">Who We Work With</h2>
+      <p class="section-lead">We support operators across sectors that depend on reliable haulage.</p>
+      <div class="pill-wrap">
+        <span class="pill industry-tag"><i class="fa-solid fa-helmet-safety"></i> Construction</span>
+        <span class="pill industry-tag"><i class="fa-solid fa-mountain"></i> Mining &amp; Quarrying</span>
+        <span class="pill industry-tag"><i class="fa-solid fa-wheat-awn"></i> Agriculture</span>
+        <span class="pill industry-tag"><i class="fa-solid fa-box"></i> Logistics &amp; Distribution</span>
+        <span class="pill industry-tag"><i class="fa-solid fa-tree"></i> Timber &amp; Forestry</span>
+        <span class="pill industry-tag"><i class="fa-solid fa-industry"></i> Manufacturing</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-gradient">
+    <h2>Let's Talk About What You Need</h2>
+    <p class="cta-lead">Need a customized logistics solution? Let's discuss how we can support your business.</p>
+    <div class="row">
+      <a class="btn-contact" href="contact.html">Contact Our Team</a>
+      <a class="btn-w" href="tel:0537685549">Call 0537685549</a>
+      <a class="btn-o" href="mailto:mlghana@hotmail.com">Email Us</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/tratan-logo.png" alt="Tratan Motors" loading="lazy">
+        <p class="tagline">Supplying Ghana's roads with trucks that work as hard as you do.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/233537685549" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <nav class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Our Fleet</a>
+          <a href="daf-trucks.html">DAF Trucks</a>
+          <a href="faw-trucks.html">FAW Trucks</a>
+          <a href="trailers.html">Trailers</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>0537685549</span></p>
+        <p class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>mlghana@hotmail.com</span></p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      © 2026 Tratan Motors. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var header = document.getElementById('siteHeader');
+      function onScroll() {
+        if (window.scrollY > 40) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('is-open');
+        hamburger.classList.toggle('is-open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        header.style.zIndex = open ? '1003' : '';
+        hamburger.style.zIndex = open ? '1004' : '';
+        hamburger.style.position = open ? 'relative' : '';
+      });
+    })();
+  </script>
+</body>
+</html>

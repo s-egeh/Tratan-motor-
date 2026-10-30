@@ -1,0 +1,30 @@
+{
+  "name": "ML Ghana Limited",
+  "short_name": "ML Ghana",
+  "description": "DAF & FAW trucks and trailers in Ghana",
+  "start_url": "../index.html",
+  "scope": "../",
+  "display": "browser",
+  "background_color": "#F5F6FA",
+  "theme_color": "#1B2B8C",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
